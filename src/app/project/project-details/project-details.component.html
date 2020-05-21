@@ -1,0 +1,13 @@
+<div style="padding-left: 14px;">
+  <div class="header">{{ project.name }}</div>
+  <small>Created by {{ project.createdBy }}</small>
+</div>
+<mat-nav-list *ngIf="project.tasks.length > 0">
+  <a mat-list-item *ngFor="let task of project.tasks"> {{ task.name }}</a>
+</mat-nav-list>
+
+<span
+  style="padding-left: 14px; padding-top: 16px; display: block;"
+  *ngIf="project.tasks.length === 0"
+  >All tasks completed</span
+>

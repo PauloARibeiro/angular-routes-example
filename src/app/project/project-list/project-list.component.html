@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <a
+    [routerLink]="['/projects', project.id]"
+    mat-list-item
+    *ngFor="let project of projects$ | async"
+    >{{ project.name }}
+  </a>
+</mat-nav-list>

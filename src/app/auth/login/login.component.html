@@ -1,0 +1,21 @@
+<form *ngIf="!isLoggedIn">
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <br />
+  <button (click)="onLogin()" type="button" mat-flat-button color="warn">
+    Login
+  </button>
+</form>
+
+<div *ngIf="isLoggedIn">
+  <button (click)="onLogout()" type="button" mat-flat-button color="warn">
+    Logout
+  </button>
+</div>
